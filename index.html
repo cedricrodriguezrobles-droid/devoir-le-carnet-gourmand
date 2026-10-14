@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Le Carnet Gourmand : recette de pâtes crémeuses au citron et avis des lecteurs.">
+  <title>Le Carnet Gourmand — Pâtes crémeuses au citron</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <div class="site-container">
+    <header class="site-header">
+      <div class="brand-icon" aria-hidden="true">🍲</div>
+      <div class="brand"><strong>Le Carnet Gourmand</strong><span>Avis des lecteurs</span></div>
+      <span class="header-note">TP5 JS</span>
+    </header>
+    <main class="layout">
+      <article class="card recipe-card">
+        <h1>Pâtes crémeuses au citron</h1>
+        <p class="intro">Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
+        <div class="recipe-details">
+          <h2>Ingrédients</h2>
+          <ul><li>Pâtes</li><li>Crème</li><li>Citron</li><li>Parmesan</li></ul>
+          <h2>Préparation</h2>
+          <ol><li>Cuire les pâtes.</li><li>Mélanger la crème et le citron.</li><li>Ajouter le parmesan.</li></ol>
+        </div>
+      </article>
+      <section class="card comments-panel" aria-labelledby="form-title">
+        <h2 id="form-title">Laisser un commentaire</h2>
+        <form id="comment-form" novalidate>
+          <label for="author">Votre nom</label>
+          <input id="author" name="author" type="text" placeholder="Ex : Léa" minlength="2" required>
+          <p class="hint">Minimum 2 caractères</p>
+          <label for="comment">Votre commentaire</label>
+          <textarea id="comment" name="comment" placeholder="Votre avis sur la recette..." minlength="10" required></textarea>
+          <p class="hint">Minimum 10 caractères</p>
+          <button class="publish-button" type="submit">Publier</button>
+          <p id="form-error" class="error-message" role="alert" hidden></p>
+        </form>
+        <h2 class="comments-title">Commentaires</h2>
+        <div id="comments-list" aria-live="polite">
+          <article class="comment-card"><strong>Téo</strong><p>Superbe recette !</p><button type="button" class="delete-button">🗑️ Supprimer</button></article>
+          <article class="comment-card"><strong>Léa</strong><p>Test de commentaire</p><button type="button" class="delete-button">🗑️ Supprimer</button></article>
+        </div>
+      </section>
+    </main>
+    <footer>Devoir JavaScript — Frontend</footer>
+  </div>
+</body>
+</html>
